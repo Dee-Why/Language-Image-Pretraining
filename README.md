@@ -5,3 +5,5 @@ By default, the clip library uses the torch.hub mechanism to manage pretrained m
 ```
 ~/.cache/torch/hub/checkpoints
 ```
+
+all .py scripts can be run independently from the root of this project.
