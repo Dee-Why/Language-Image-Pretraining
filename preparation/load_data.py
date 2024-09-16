@@ -37,7 +37,8 @@ def load_cifar10_data(data_dir):
 def load_cifar10_meta(data_dir):
     meta_file = os.path.join(data_dir, 'batches.meta')
     meta_data = unpickle(meta_file)
-    return meta_data[b'label_names']
+    label_names = [label.decode('utf-8') for label in meta_data[b'label_names']]
+    return label_names
 
 
 # Path to the CIFAR-10 data folder
